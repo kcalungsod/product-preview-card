@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+body {
+    font-family: 'Fraunces', 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+    background-color: hsl(32, 37%, 92%);
+    margin: 0;
+}
+
+ul {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+    list-style: none;
+}
+
+.product-container {
+    display: block;
+    width: 350px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.description-container {
+    padding: 0 20px 30px 20px;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-container p,
+span {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+.description-container>.product-name {
+    font-size: xx-large;
+}
+
+.category {
+    letter-spacing: 5px;
+}
+
+.price-container {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.current-price {
+    font-family: 'Fraunces';
+    font-weight: bold;
+    font-size: 30px;
+    color: hsl(158, 35%, 49%);
+}
+
+.previous-price {
+    text-decoration: line-through;
+    margin-left: 15px;
+}
+
+.btn-cart {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(158, 35%, 49%);
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.cart-icon {
+    margin-right: 10px;
+}
+
+.btn-cart:hover {
+    background-color: hsl(158, 36%, 37%);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 545px) {
+    .navigation {
+        position: sticky;
+        top: 0;
+        display: inline-block;
+        background-color: black;
+        block-size: 50px;
+        width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 50px;
+        left: -500px;
+        display: flex;
+        background-color: white;
+        width: 100%;
+        height: max-content;
+        flex-wrap: wrap;
+        transition: left 0.5s;
+    }
+
+    .menu-items {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: black;
+        padding: 20px 0 20px;
+    }
+
+    .nav-btn a:visited,
+    .nav-btn a:link {
+        text-decoration: none;
+        font-family: 'Montserrat';
+        font-size: medium;
+        letter-spacing: 3px;
+        padding: 20px;
+        color: hsl(32, 37%, 92%);
+    }
+
+    .nav-btn:hover,
+    .nav-btn:hover>a {
+        background-color: hsl(32, 37%, 92%);
+        color: black;
+    }
+
+    header img {
+        float: right;
+        width: 100px;
+    }
+
+    .hamburger-btn {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 8px;
+        left: 30px;
+    }
+
+    #menu-toggle {
+        position: relative;
+        height: inherit;
+        width: inherit;
+        top: -30px;
+        left: -3px;
+        opacity: 0;
+    }
+
+    .hamburger-btn .line {
+        display: block;
+        position: relative;
+        top: 5px;
+        width: 30px;
+        height: 5px;
+        margin-bottom: 5px;
+
+        background: hsl(32, 37%, 92%);
+        border-radius: 3px;
+    }
+
+    .hamburger-btn .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .hamburger-btn .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .hamburger-btn .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #menu-toggle:checked {
+        transform: rotate(45deg);
+    }
+
+    footer {
+        position: sticky;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-around;
+        font-size: small;
+        font-family: 'Montserrat';
+        background-color: black;
+        color: hsl(32, 37%, 92%);
+        padding: 20px;
+    }
+
+    footer img {
+        width: 200px;
+        margin: 10px 0 30px 0;
+    }
+
+    footer h3 {
+        letter-spacing: 3px;
+    }
+
+    footer a:link,
+    footer a:visited {
+        text-decoration: none;
+        color: hsl(32, 37%, 92%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .footer_container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer_links {
+        padding: 20px;
+        font-size: 11px;
+    }
+
+    .footer_links>ul>li {
+        display: inline-block;
+        list-style: none;
+        border-right: 1px solid white;
+        padding-right: 5px;
+    }
+
+    .footer_links>ul>li:nth-child(5) {
+        border-right: none;
+    }
+
+    .footer_description p {
+        border-top: 1px solid hsl(32, 37%, 92%);
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: small;
+    }
+}
+
+@media only screen and (min-width: 546px) {
+    header.navigation {
+        background-color: black;
+        text-align: center;
+        height: max-content;
+        margin: unset;
+    }
+
+    header img {
+        width: 300px;
+        border: 0.5px solid hsl(32, 37%, 92%);
+        border-top: none;
+        transition: border 2s, transform 2s;
+    }
+
+    header img:hover {
+        border: 1px dotted;
+        transform: rotateY(360deg);
+    }
+
+    .overlay {
+        padding: 10px;
+    }
+
+    .nav-btn {
+        padding: 20px;
+        background-color: black;
+    }
+
+    .nav-btn a:visited,
+    .nav-btn a:link {
+        text-decoration: none;
+        font-family: 'Montserrat';
+        font-size: large;
+        letter-spacing: 3px;
+        padding: 20px;
+        color: hsl(32, 37%, 92%);
+    }
+
+    .nav-btn:hover,
+    .nav-btn:hover>a {
+        background-color: hsl(32, 37%, 92%);
+        color: black;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-container {
+        display: flex;
+        width: 600px;
+        height: 450px;
+    }
+
+    .img-container img {
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .description-container {
+        width: 40%;
+        padding: 20px 30px 20px 30px;
+    }
+
+    .product-name {
+        padding-bottom: 10px;
+    }
+
+    .price-container {
+        padding-top: 10px;
+    }
+
+    .button-container {
+        padding-top: 10px;
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
+    .menu-items {
+        display: unset;
+    }
+
+    footer {
+        position: sticky;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-around;
+        font-size: small;
+        font-family: 'Montserrat';
+        background-color: black;
+        color: hsl(32, 37%, 92%);
+        padding: 20px;
+    }
+
+    footer img {
+        height: 100%;
+        width: 300px;
+        margin: 10px 0 30px 0;
+    }
+
+    footer h3 {
+        letter-spacing: 3px;
+    }
+
+    footer a:link,
+    footer a:visited {
+        text-decoration: none;
+        color: hsl(32, 37%, 92%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .footer_container {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .footer_links {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .footer_links>ul>li {
+        display: inline-block;
+        list-style: none;
+        border-right: 1px solid white;
+        padding: 0 20px 0 20px;
+    }
+
+    .footer_links>ul>li:nth-child(5) {
+        border-right: none;
+    }
+
+    .footer_description p {
+        border-top: 1px solid hsl(32, 37%, 92%);
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: small;
+    }
+}
